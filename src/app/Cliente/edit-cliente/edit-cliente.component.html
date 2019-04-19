@@ -1,0 +1,28 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Modificar Datos</h3>
+    </div>
+    <div class="card-body">
+      <form action="" >
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input [(ngModel)]="cliente.nombre" type="text" name="nombre"  class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="">Dirección:</label>
+          <input [(ngModel)]="cliente.direccion" type="text" name="direccion"  class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="">Dirección:</label>
+          <input [(ngModel)]="cliente.ciudad" type="text" name="ciudad"  class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="">Dirección:</label>
+          <input [(ngModel)]="cliente.telefono" type="text" name="telefono"  class="form-control" >
+        </div>
+        <button (click)="Actualizar(cliente)" class="btn btn-danger">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
