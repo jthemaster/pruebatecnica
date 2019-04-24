@@ -1,3 +1,36 @@
-<p>
-  add-consumo works!
-</p>
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar Consumo</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input [(ngModel)]="consumo.tarjeta_id" type="text" name="tarjeta_iddd" id="tarjeta_idadd" class="form-control"
+            placeholder="tarjeta_id" aria-describedby="helpId">
+          <small id="helpIdtarjeta_idadd" class="text-muted">Ingresar nombre</small>
+        </div>
+        <div class="form-group">
+          <label for="">Direccion:</label>
+          <input [(ngModel)]="consumo.monto" type="text" name="montoadd" id="montoadd" class="form-control"
+            placeholder="monto" aria-describedby="helpId">
+          <small id="helpIdmontoadd" class="text-muted">Ingresar dirección</small>
+        </div>
+        <div class="form-group">
+          <label for="">Ciudad:</label>
+          <input [(ngModel)]="consumo.descripcion" type="text" name="descripcionadd" id="descripcionadd" class="form-control"
+            placeholder="descripcion" aria-describedby="helpId">
+          <small id="helpIdndescripcionadd" class="text-muted">Ingresar ciudad</small>
+        </div>
+        <div class="form-group">
+          <label for="">Telefono:</label>
+          <input [(ngModel)]="consumo.fecha" type="date" name="consumoadd" id="consumoadd" class="form-control"
+            placeholder="fecha" aria-describedby="helpId">
+          <small id="helpIdconsumoadd" class="text-muted">ingresar telefono</small>
+        </div>
+        <button (click)="Guardar(consumo)" class="btn btn-danger">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -29,7 +29,7 @@ private TarjetaRepository repositorio;
     }
 
     @Override
-    public Tarjeta listarId(int id) {
+    public Tarjeta listarId(String id) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return repositorio.findOne(id);
     }
@@ -47,7 +47,7 @@ private TarjetaRepository repositorio;
     }
 
     @Override
-    public Tarjeta delete(int id) {
+    public Tarjeta delete(String id) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         Tarjeta c=repositorio.findOne(id);
         if(c!=null){

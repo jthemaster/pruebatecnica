@@ -30,7 +30,7 @@ export class ListarClienteComponent implements OnInit {
     this.serviceCliente.deleteCliente(cliente) 
     .subscribe(data=>{
       this.clientes=this.clientes.filter(c=>c!==cliente);
-      alert("usuario eliminado");
+      alert("Usuario Eliminado");
     })
 
   }

@@ -6,6 +6,7 @@
 package com.example.prueba01.model;
 
 import javax.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
@@ -14,11 +15,12 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tarjetas")
 public class Tarjeta {
-    
+    /*@GeneratedValue(strategy = GenerationType.IDENTITY)*/
+   
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private String id;
     @Column
     private int cliente_id;
     @Column
@@ -27,11 +29,11 @@ public class Tarjeta {
     private String tipo;
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     

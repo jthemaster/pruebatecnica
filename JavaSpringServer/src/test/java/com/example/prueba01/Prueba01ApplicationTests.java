@@ -12,7 +12,7 @@ public class Prueba01ApplicationTests {
 	@Test
 	public void contextLoads() {
             
-            System.out.println("Inicio prueba unitaria");
+            //System.out.println("Inicio prueba unitaria");
 	}
 
 }

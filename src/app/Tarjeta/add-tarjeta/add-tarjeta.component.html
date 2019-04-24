@@ -1,3 +1,36 @@
-<p>
-  add-tarjeta works!
-</p>
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar Cliente</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">tarjeta_id:</label>
+          <input [(ngModel)]="tarjeta.tarjeta_id" type="text" name="tarjeta_idadd" id="tarjeta_idadd" class="form-control"
+            placeholder="Nombre" aria-describedby="helpId">
+          <small id="helpIdtarjeta_idadd" class="text-muted">Ingresar tarjeta_id</small>
+        </div>
+        <div class="form-group">
+          <label for="">cliente_id:</label>
+          <input [(ngModel)]="tarjeta.cliente_id" type="text" name="cliente_idadd" id="cliente_idadd" class="form-control"
+            placeholder="Direccion" aria-describedby="helpId">
+          <small id="helpIdcliente_idadd" class="text-muted">Ingresar cliente_id</small>
+        </div>
+        <div class="form-group">
+          <label for="">Ciudad:</label>
+          <input [(ngModel)]="tarjeta.tipo" type="text" name="tipoadd" id="tipoadd" class="form-control"
+            placeholder="Ciudad" aria-describedby="helpId">
+          <small id="helpIdntipod" class="text-muted">Ingresar tipo</small>
+        </div>
+        <div class="form-group">
+          <label for="">ccv:</label>
+          <input [(ngModel)]="tarjeta.ccv" type="text" name="ccvadd" id="ccvadd" class="form-control"
+            placeholder="ccv" aria-describedby="helpId">
+          <small id="helpIdccvadd" class="text-muted">ingresar ccv</small>
+        </div>
+        <button (click)="Guardar(tarjeta)" class="btn btn-danger">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

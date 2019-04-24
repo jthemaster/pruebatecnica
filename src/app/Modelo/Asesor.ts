@@ -1,4 +1,4 @@
-export class Cliente{
+export class Asesor{
     id: number;
     nombre: String;
     Especialidad: String;

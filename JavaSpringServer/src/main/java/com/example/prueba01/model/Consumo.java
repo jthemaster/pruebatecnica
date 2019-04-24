@@ -19,7 +19,9 @@ public class Consumo {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int tarjeta_id;
+    private int id;
+    @Column
+    private String tarjeta_id;
     @Column
     private String descripcion;
     @Column
@@ -29,10 +31,18 @@ public class Consumo {
 
 
     public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+     public String getTarjeta_id() {
         return tarjeta_id;
     }
 
-    public void setId(int tarjeta_id) {
+    public void setTarjeta_id(String tarjeta_id) {
         this.tarjeta_id = tarjeta_id;
     }
 

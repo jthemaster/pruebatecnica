@@ -14,9 +14,9 @@ import org.springframework.data.repository.Repository;
  *
  * @author Juan
  */
-public interface TarjetaRepository extends Repository<Tarjeta, Integer > {
+public interface TarjetaRepository extends Repository<Tarjeta,  String> {
     List<Tarjeta>findAll();
-    Tarjeta findOne(int id);
+    Tarjeta findOne(String id);
     Tarjeta save(Tarjeta c);
     Tarjeta delete(Tarjeta c);
     

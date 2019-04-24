@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceAsesorService } from 'src/app/Service/service-asesor.service';
+import { Asesor } from 'src/app/Modelo/Asesor';
 
 @Component({
   selector: 'app-edit-asesor',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditAsesorComponent implements OnInit {
 
-  constructor() { }
+  asesor :Asesor = new Asesor();
+  constructor(private router:Router,private serviceAsesor:ServiceAsesorService) { }
 
   ngOnInit() {
+    this.Editar();
   }
 
+  Editar(){
+    let id=localStorage.getItem("id");
+    this.serviceAsesor.getAsesorId(+id)
+    .subscribe(data=>{
+      this.asesor=data;
+    })
+  }
+  Actualizar(asesor:Asesor){
+    this.serviceAsesor.updateAsesor(asesor)
+    .subscribe(data=>{
+      this.asesor=data;
+      alert("Se actualizo correctamente");
+      this.router.navigate(["listar-asesor"]);
+    })
+
+  }
 }

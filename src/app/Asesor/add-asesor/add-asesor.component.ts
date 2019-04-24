@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceAsesorService } from 'src/app/Service/service-asesor.service';
+import { Router } from '@angular/router';
+import { Asesor } from 'src/app/Modelo/Asesor';
+
 
 @Component({
   selector: 'app-add-asesor',
@@ -6,10 +10,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-asesor.component.css']
 })
 export class AddAsesorComponent implements OnInit {
-
-  constructor() { }
+  
+  asesor :Asesor = new Asesor();
+  constructor(private router:Router, private serviceAsesor:ServiceAsesorService) { }
 
   ngOnInit() {
   }
+
+  Guardar(asesor:Asesor) {
+    alert(asesor);
+    this.serviceAsesor.createAsesor(asesor)
+    .subscribe(data=>{
+      this.asesor=data;
+    alert("Asesor adicionado");
+    this.router.navigate(["listar-asesor"]);
+    })
+  }
+
+
 
 }

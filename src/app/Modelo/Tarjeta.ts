@@ -1,5 +1,5 @@
 export class Tarjeta{
-    id: number;
+    id: String;
     cliente_id: number;
     tipo: String;
     ccv: number;

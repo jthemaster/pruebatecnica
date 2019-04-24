@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping( {"/clientes"})
-@CrossOrigin(origins = "http://angular-env.dc33cxe7jv.us-west-1.elasticbeanstalk.com",maxAge = 3600)
+@CrossOrigin(origins = {"http://angular-env.dc33cxe7jv.us-west-1.elasticbeanstalk.com", "http://localhost:4200","http://localhost:8080","http://localhost:80"},maxAge = 3600)
 public class ClienteController {
     
     @Autowired

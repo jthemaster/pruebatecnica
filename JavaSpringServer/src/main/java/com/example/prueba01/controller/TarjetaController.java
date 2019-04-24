@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping( {"/tarjetas"})
-@CrossOrigin(origins = "http://localhost:4200",maxAge = 3600)
+@CrossOrigin(origins = {"http://angular-env.dc33cxe7jv.us-west-1.elasticbeanstalk.com", "http://localhost:4200","http://localhost:8080","http://localhost:80"},maxAge = 3600)
 public class TarjetaController {
     
     @Autowired
@@ -45,19 +45,19 @@ public class TarjetaController {
     }
     
     @GetMapping(path = {"/{id}"})
-    public Tarjeta listarId(@PathVariable("id")int id){
+    public Tarjeta listarId(@PathVariable("id")String id){
         return service.listarId(id);
     }
     
     @PutMapping(path = {"/{id}"})
-    public Tarjeta editar(@RequestBody Tarjeta c,@PathVariable("id") int id){
+    public Tarjeta editar(@RequestBody Tarjeta c,@PathVariable("id") String id){
         c.setId(id);
         return service.edit(c);
         
     }
     
     @DeleteMapping(path = {"/{id}"})
-    public Tarjeta delete(@PathVariable("id") int id){
+    public Tarjeta delete(@PathVariable("id") String id){
         return service.delete(id);
         
     }

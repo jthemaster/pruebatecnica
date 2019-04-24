@@ -1,3 +1,29 @@
-<p>
-  listar-asesor works!
-</p>
+<div class="container col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h3>Lista de asesores</h3>
+    </div>
+    <div class="table-responsive">
+     <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>NOMBRE</th>
+            <th>ESPECIALIDAD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asesor of asesores" class="text-center" >
+            <td > {{asesor.nombre}} </td>
+            <td > {{asesor.especialidad}} </td>
+            <td>
+            <button (click)="Editar(asesor)" class="btn btn-warning">Editar</button>
+            <button  (click)="Delete(asesor)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

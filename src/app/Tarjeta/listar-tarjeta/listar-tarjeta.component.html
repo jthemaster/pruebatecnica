@@ -1,3 +1,31 @@
-<p>
-  listar-tarjeta works!
-</p>
+<div class="container col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h3>Lista de tarjetas</h3>
+    </div>
+    <div class="table-responsive">
+     <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>TARJETA</th>
+            <th>TIPO</th>
+            <th>CCV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarjeta of tarjetas" class="text-center" >
+            <td > {{tarjeta.id}} </td>
+            <td > {{tarjeta.tipo}} </td>
+            <td > {{tarjeta.ccv}} </td>
+            <td>
+            <button (click)="Editar(tarjeta)" class="btn btn-warning">Editar</button>
+            <button  (click)="Delete(tarjeta)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
