@@ -22,6 +22,11 @@ public class TarjetaServiceImp implements TarjetaService{
 @Autowired
 private TarjetaRepository repositorio;
 
+@Autowired
+private TarjetaClienteRepository repositoriocliente;
+/*@Autowired
+private TarjetasClienteRepository repositoriocliente;*/
+
     @Override
     public List<Tarjeta> listar() {
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -32,6 +37,13 @@ private TarjetaRepository repositorio;
     public Tarjeta listarId(String id) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return repositorio.findOne(id);
+    }
+    
+    @Override
+    public List<Tarjeta> listartarjetas_id(int cliente_id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //return repositorio.findCardsbyCliente(cliente_id);
+        //return repositoriocliente.findAllbycliente(cliente_id);
     }
 
     @Override

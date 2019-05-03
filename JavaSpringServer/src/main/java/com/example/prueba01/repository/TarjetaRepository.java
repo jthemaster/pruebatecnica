@@ -14,10 +14,11 @@ import org.springframework.data.repository.Repository;
  *
  * @author Juan
  */
-public interface TarjetaRepository extends Repository<Tarjeta,  String> {
+public interface TarjetaRepository extends  Repository<Tarjeta,  String> {
     List<Tarjeta>findAll();
     Tarjeta findOne(String id);
+  // List<Tarjeta> findAll(String String);
     Tarjeta save(Tarjeta c);
     Tarjeta delete(Tarjeta c);
-    
+   // Tarjeta deletesTarjetad(Tarjeta c);
 }

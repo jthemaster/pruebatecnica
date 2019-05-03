@@ -28,6 +28,7 @@ import { EditConsumoComponent } from './Consumo/edit-consumo/edit-consumo.compon
 import { ListarAsesorComponent } from './Asesor/listar-asesor/listar-asesor.component';
 import { AddAsesorComponent } from './Asesor/add-asesor/add-asesor.component';
 import { EditAsesorComponent } from './Asesor/edit-asesor/edit-asesor.component';
+import { SearchFilterPipePipe } from './search-filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { EditAsesorComponent } from './Asesor/edit-asesor/edit-asesor.component'
     EditConsumoComponent,
     ListarAsesorComponent,
     AddAsesorComponent,
-    EditAsesorComponent
+    EditAsesorComponent,
+    SearchFilterPipePipe
   ],
   imports: [
     BrowserModule,

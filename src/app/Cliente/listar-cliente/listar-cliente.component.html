@@ -11,7 +11,7 @@
             <th>DIRECCION</th>
             <th>CIUDAD</th>
             <th>TELEFONO</th>
-            <th>TARJETAS</th>
+            <th>No TARJETAS</th>
             <th>ACCIONES</th>
           </tr>
         </thead>
@@ -21,9 +21,13 @@
             <td > {{cliente.direccion}} </td>
             <td > {{cliente.ciudad}} </td>
             <td > {{cliente.telefono}} </td>
-            <td > </td>
+            <td >  <div *ngFor="let tarjeta of tarjetas | searchFilterPipe:cliente  ;let l = count  "  class="align-content-center">
+              <button (click)="Listartarjeta(tarjeta.id)" class="btn btn-light ">{{ l}}</button>
+             
+
+</div> </td>
             <td>
-            <button (click)="Editar(cliente)" class="btn btn-warning">Editar</button>
+            <button (click)="Editar(cliente)" class="btn  btn-secondary">Editar</button>
             <button  (click)="Delete(cliente)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
             </td>
 

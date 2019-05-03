@@ -11,8 +11,17 @@ export class AppComponent {
 
   constructor(private router:Router){}
 
-  Listar(){
+  Listarcliente(){
     this.router.navigate(["listar-cliente"]);
+  }
+ Listartarjeta(){
+    this.router.navigate(["listar-tarjeta"]);
+  }
+   Listarconsumo(){
+    this.router.navigate(["listar-consumo"]);
+  }
+  Listarasesor(){
+    this.router.navigate(["listar-asesor"]);
   }
   agregar(){
     this.router.navigate(["add-cliente"]);

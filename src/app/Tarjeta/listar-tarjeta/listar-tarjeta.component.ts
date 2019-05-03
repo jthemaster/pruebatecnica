@@ -12,6 +12,7 @@ import { Tarjeta } from 'src/app/Modelo/Tarjeta';
 export class ListarTarjetaComponent implements OnInit {
 
   tarjetas:Tarjeta[];
+  idselected:String;
   constructor(private serviceTarjeta:ServiceTarjetaService, private router:Router) { }
 
   ngOnInit() {
@@ -19,7 +20,17 @@ export class ListarTarjetaComponent implements OnInit {
     .subscribe(data=>{
       this.tarjetas=data;
     })
+
+   /* let cliente_id=localStorage.getItem("cliente_id");
+    this.serviceTarjeta.getTarjetas(+cliente_id)
+    .subscribe(data=>{
+      this.tarjetas=data;
+    })*/
+
   }
+
+
+
   Editar(tarjeta:Tarjeta):void{
     localStorage.setItem("id",tarjeta.id.toString());
     this.router.navigate(["edit-tarjeta"]);

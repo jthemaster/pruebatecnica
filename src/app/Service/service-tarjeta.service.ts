@@ -13,10 +13,14 @@ export class ServiceTarjetaService {
   //Referencia al Back-end listatarjetas
   Url=window["cfgApiBaseUrl"]+'/tarjetas';
 
-  //Obtener todo el arreglo del objeto tarjetas de back-end
   getTarjetas() {
     return this.http.get<Tarjeta[]>(this.Url)
   }
+
+  //Obtener todo el arreglo del objeto tarjetas de back-end
+  /*getTarjetas(id:number) {
+    return this.http.get<Tarjeta[]>(this.Url+"/"+id)
+  }*/
 
   createTarjeta(tarjeta:Tarjeta) {
     return this.http.post<Tarjeta>(this.Url,tarjeta)

@@ -27,7 +27,11 @@ import org.springframework.web.bind.annotation.RestController;
 /*@CrossOrigin(origins = "http://localhost:4200",maxAge = 3600)*/
 @RestController
 @RequestMapping( {"/asesores"})
-@CrossOrigin(origins = {"http://angular-env.dc33cxe7jv.us-west-1.elasticbeanstalk.com", "http://localhost:4200","http://localhost:8080","http://localhost:80"},maxAge = 3600)
+@CrossOrigin(origins = {"http://angularenvdc33cxe7jv.us-west-1.elasticbeanstalk.com", 
+    "http://localhost:4200","http://localhost:8080","http://localhost:80",
+    "http://localhost:8080/prueba01-0.0.1-SNAPSHOT", 
+    "http://pruebaibmenv5zvjmzs9uh.us-west-1.elasticbeanstalk.com",
+    "http://pruebatecnicaibm.ddns.net","http://190.248.198.4:8080"},maxAge = 3600)
 public class AsesorController {
     
     @Autowired

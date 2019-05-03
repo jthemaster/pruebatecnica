@@ -5,7 +5,8 @@
  */
 package com.example.prueba01.model;
 
-import java.text.DateFormat;
+
+import java.util.Date;
 import javax.persistence.*;
 
 /**
@@ -27,7 +28,7 @@ public class Consumo {
     @Column
     private double monto;
     @Column
-    private DateFormat fecha;
+    private Date fecha;
 
 
     public int getId() {
@@ -62,13 +63,12 @@ public class Consumo {
         this.monto = monto;
     }
 
-    public DateFormat getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setCiudad(DateFormat fecha) {
+    public void setCiudad(Date fecha) {
         this.fecha = fecha;
     }
-
     
 }

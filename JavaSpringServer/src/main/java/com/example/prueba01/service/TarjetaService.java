@@ -13,8 +13,9 @@ import java.util.List;
  * @author Juan
  */
 public interface TarjetaService {
-    List<Tarjeta>listar();
+    List<Tarjeta> listar();
     Tarjeta listarId(String id);
+    List<Tarjeta>  listartarjetas_id(int cliente_id);
     Tarjeta add(Tarjeta c);
     Tarjeta edit(Tarjeta c);
     Tarjeta delete(String id);

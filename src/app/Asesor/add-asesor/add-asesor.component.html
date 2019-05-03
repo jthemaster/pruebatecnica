@@ -7,17 +7,17 @@
       <form action="">
         <div class="form-group">
           <label for="">Nombre:</label>
-          <input [(ngModel)]="cliente.nombre" type="text" name="nombreadd" id="nombreadd" class="form-control"
+          <input [(ngModel)]="asesor.nombre" type="text" name="nombreadd" id="nombreadd" class="form-control"
             placeholder="Nombre" aria-describedby="helpId">
           <small id="helpIdnombreadd" class="text-muted">Ingresar nombre</small>
         </div>
         <div class="form-group">
           <label for="">Especialidad:</label>
-          <input [(ngModel)]="cliente.especialidad" type="text" name="especialidadadd" id="direccionadd" class="form-control"
+          <input [(ngModel)]="asesor.especialidad" type="text" name="especialidadadd" id="direccionadd" class="form-control"
             placeholder="especialidad" aria-describedby="helpId">
           <small id="helpIdespecialidadadd" class="text-muted">Ingresar dirección</small>
         </div>
-        <button (click)="Guardar(cliente)" class="btn btn-danger">Guardar</button>
+        <button (click)="Guardar(asesor)" class="btn btn-danger">Guardar</button>
       </form>
     </div>
   </div>
