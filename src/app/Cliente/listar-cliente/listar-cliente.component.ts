@@ -24,10 +24,10 @@ export class ListarClienteComponent implements OnInit {
       this.clientes=data;
     });
 
-   /* this.serviceTarjeta.getTarjetas()
+    this.serviceTarjeta.getTarjetas()
     .subscribe(data=>{
       this.tarjetas=data;
-    });*/
+    });
   }
 
   Listartarjeta(cliente:Cliente){
